@@ -49,7 +49,7 @@
     "**/.git": true,
     "**/Thumbs.db": true,
     "**/*.freezed.dart": true,
-    "**/*.g.dart": true,
+    "**/*.g.dart": true
   },
   "explorer.compactFolders": false, // aqui maximixa quando hรก pasta dentro de pasta
   "window.titleBarStyle": "custom",
@@ -58,7 +58,7 @@
   "explorer.fileNesting.patterns": {
       "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata,CHANGELOG.md,LICENSE,analysis_options.yaml,melos_*.iml, .puro.json",
       "*.dart": "${capture}.g.dart,${capture}.freezed.dart",
-      "{{environment}}_variables.json": "*_variables.json",
+      "{{environment}}_variables.json": "*_variables.json"
   },
   "git.autofetch": true,
   "[yaml]": {
