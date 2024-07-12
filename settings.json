@@ -1,4 +1,12 @@
 {
+  "editor.guides.bracketPairs": "active",
+  "editor.formatOnSave": true,
+  "dart.checkForSdkUpdates": false,
+  "dart.flutterHotReloadOnSave": "never",
+  "dart.previewFlutterUiGuides": true,
+  "dart.previewFlutterUiGuidesCustomTracking": false,
+  "redhat.telemetry.enabled": false,
+  "debug.toolBarLocation": "commandCenter",
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontSize": 15,
   "editor.lineHeight": 1.8,
@@ -41,7 +49,7 @@
     "**/.git": true,
     "**/Thumbs.db": true,
     "**/*.freezed.dart": true,
-    "**/*.g.dart": true
+    "**/*.g.dart": true,
   },
   "explorer.compactFolders": false, // aqui maximixa quando hรก pasta dentro de pasta
   "window.titleBarStyle": "custom",
@@ -50,7 +58,7 @@
   "explorer.fileNesting.patterns": {
       "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata,CHANGELOG.md,LICENSE,analysis_options.yaml,melos_*.iml, .puro.json",
       "*.dart": "${capture}.g.dart,${capture}.freezed.dart",
-      "{{environment}}_variables.json": "*_variables.json"
+      "{{environment}}_variables.json": "*_variables.json",
   },
   "git.autofetch": true,
   "[yaml]": {
@@ -82,5 +90,7 @@
   },
   "workbench.layoutControl.enabled": false,
   "workbench.colorTheme": "Catppuccin Macchiato",
-  "symbols.hidesExplorerArrows": false
+  "symbols.hidesExplorerArrows": false,
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "auto"
 }
