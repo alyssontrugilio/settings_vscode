@@ -52,6 +52,7 @@
         "**/*.g.dart": true
     },
     "explorer.compactFolders": false, // aqui maximixa quando hรก pasta dentro de pasta
+    "window.title": "${activeEditorMedium}${separator}${rootName}${separator}",
     "window.titleBarStyle": "custom",
     "explorer.fileNesting.enabled": true, // agrupa arquivos semelhantes
     "explorer.fileNesting.expand": false,
