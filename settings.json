@@ -113,4 +113,5 @@
     "dart"
   ],
   "editor.codeLensFontFamily": "Fira Code",
+  "editor.fontLigatures": true
 }
