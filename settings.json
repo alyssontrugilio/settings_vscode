@@ -23,7 +23,7 @@
   // * Flutter/Dart settings
   "[dart]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "dart-lang.dart-code",
+    "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit"
     },
