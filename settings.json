@@ -21,6 +21,7 @@
   "editor.suggestSelection": "first",
   "editor.parameterHints.enabled": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "prettier.bracketSameLine": true,
 
   // 🔹 Formatadores para JS/TS/React
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -47,6 +48,7 @@
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "html.format.enable": true,
 
   // 🔹 Configurações do Prettier
   "prettier.singleQuote": true,
@@ -55,16 +57,6 @@
   "prettier.arrowParens": "always",
   "prettier.bracketSpacing": true,
   "prettier.printWidth": 100,
-
-  // 🚀 Configurações para Flutter/Dart
-  "[dart]": {
-    "editor.defaultFormatter": "Dart-Code.dart-code",
-    "editor.formatOnSave": true
-  },
-  "dart.checkForSdkUpdates": false,
-  "dart.flutterHotReloadOnSave": "always",
-  "dart.previewFlutterUiGuides": true,
-  "dart.previewFlutterUiGuidesCustomTracking": false,
 
   // 📂 Explorer e Organização de Arquivos
   "explorer.confirmDelete": false,
@@ -76,7 +68,8 @@
     "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml",
     "*.dart": "${capture}.g.dart,${capture}.freezed.dart"
   },
-  "explorer.sortOrder": "foldersNestsFiles",
+  "explorer.sortOrder": "default",
+  "explorer.compactFolders": false,
   "files.exclude": {
     "**/.git": true,
     "**/node_modules": true,
@@ -90,21 +83,21 @@
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.showExitAlert": false,
-
-  // 🔧 Git e Controle de Código
-  "git.autofetch": true,
-  "git.enableSmartCommit": true,
-  "git.openRepositoryInParentFolders": "always",
-
-  // 🎨 Interface e Aparência
-  "workbench.colorTheme": "Dracula Theme",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.statusBar.visible": true,
-  "workbench.startupEditor": "none",
-  "workbench.layoutControl.enabled": false,
-  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "workbench.navigationControl.enabled": false,
   "window.commandCenter": false,
-  "window.title": "${activeEditorMedium}${separator}${rootName}${separator}",
-  "window.titleBarStyle": "custom",
-  "window.customTitleBarVisibility": "auto"
+  "workbench.layoutControl.enabled": false,
+  // Desativar reload automático ao salvar arquivos Dart
+  "[dart]": {
+    "editor.formatOnSave": true
+  },
+  "dart.flutterHotReloadOnSave": false,
+  "dart.flutterHotRestartOnSave": false,
+  "workbench.iconTheme": "vscode-icons"
 }
