@@ -1,36 +1,133 @@
 {
-  // 🖋️ Fonte e Estilo do Editor
+  // ==========================
+  // ⚡ Interface do VS Code ⚡
+  // ==========================
+  // Define qual editor abrir ao iniciar o VS Code
+  "workbench.startupEditor": "newUntitledFile",
+  // Formato dos rótulos das abas de arquivos
+  "workbench.editor.labelFormat": "short",
+  // Oculta a Activity Bar
+  "workbench.activityBar.location": "top",
+  // Oculta a barra de status
+  "workbench.statusBar.visible": false,
+  // Ativa um layout mais compacto no Explorer
+  "explorer.compactFolders": false,
+  // Confirmação para excluir arquivos diretamente pelo Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  // Desativa o alerta de saída do terminal
+  "terminal.integrated.showExitAlert": false,
+  // ==========================
+  // 🎨 Aparência do Editor 🎨
+  // ==========================
+  // Fonte do editor
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 14,
-  "editor.lineHeight": 1.6,
-  "editor.tabSize": 2,
-  "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "editor.fontWeight": "600",
-
-  // ⚡ Performance e Experiência
+  // Ajusta espaçamento entre linhas
+  "editor.lineHeight": 1.8,
+  // Define guias visuais para largura de linha
+  "editor.rulers": [80, 120],
+  // Oculta a minimap
   "editor.minimap.enabled": false,
-  "editor.stickyScroll.enabled": false,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.renderLineHighlight": "none",
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.semanticHighlighting.enabled": false,
+  // Esconde a barra de rolagem vertical
+  "editor.scrollbar.vertical": "hidden",
+  // Define o tema de cores (claro e escuro)
+  "workbench.preferredDarkColorTheme": "Dracula Theme",
+  // ==========================
+  // ⚙️ Configuração do Editor ⚙️
+  // ==========================
 
+  //Animacao ao digitar
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // Destaca a linha atual apenas na lateral
+  "editor.renderLineHighlight": "gutter",
+  // Oculta o cursor na barra lateral do editor
+  "editor.hideCursorInOverviewRuler": true,
+  // Tamanho da indentação
+  "editor.tabSize": 2,
+  //Ativando o bracketPair
+  "editor.guides.bracketPairs": "active",
+  // ==========================
+  // 🏗️ Configurações do Terminal 🏗️
+  // ==========================
+  // Fonte e tamanho do terminal integrado
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  // Ativa aceleração por GPU no terminal
+  "terminal.integrated.gpuAcceleration": "on",
+  // ==========================
+  // 🔥 JavaScript & TypeScript 🔥
+  // ==========================
+  // Ativa sugestões de auto-imports
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  // Atualiza imports automaticamente ao mover arquivos
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // Ajustes para TailwindCSS
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    "class:\\s*?[\"'`]([^\"'`]*).*?,"
+  ],
+  // ==========================
+  // 🌱 Configuração de Arquivos 🌱
+  // ==========================
+  // Associações de tipos de arquivos
+  "files.associations": {
+    ".env.*": "dotenv",
+    ".prettierrc": "json",
+    "*.css": "css",
+    ".dev.vars": "dotenv"
+  },
+  // Padrões de aninhamento de arquivos no Explorer
+  "explorer.fileNesting.patterns": {
+    "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-*, bun.lockb, nest*, package-lock*",
+    "tailwind.config.*": "tailwind.config*, postcss.config*",
+    ".env.local": ".env*",
+    ".env": ".env*"
+  },
+  "explorer.fileNesting.enabled": true,
+  // Excluir arquivos e pastas do Explorer
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    ".vscode": true
+  },
+  // ==========================
+  // 🛠️ Ferramentas e Linting 🛠️
+  // ==========================
+  // Configuração do ESLint
+  "eslint.validate": ["javascript", "javascriptreact", "graphql"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  // ==========================
   // 🎨 Formatação e Código
+  //===========================
+  // Ativa a formatação ao salvar
   "editor.formatOnSave": true,
+  // Ativa sugestões automáticas no editor
   "editor.suggestSelection": "first",
   "editor.parameterHints.enabled": false,
+  // Desativa sugestões ao pressionar caracteres de commit (ex: ponto e vírgula)
   "editor.acceptSuggestionOnCommitCharacter": false,
   "prettier.bracketSameLine": true,
 
   // 🔹 Formatadores para JS/TS/React
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Define o formatador padrão para arquivos JS/T
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  // Define o formatador padrão para arquivos TS/T
+
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -58,46 +155,23 @@
   "prettier.bracketSpacing": true,
   "prettier.printWidth": 100,
 
-  // 📂 Explorer e Organização de Arquivos
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": false,
-  "explorer.fileNesting.patterns": {
-    "package.json": "package-lock.json",
-    "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml",
-    "*.dart": "${capture}.g.dart,${capture}.freezed.dart"
+  // Desativar reload automático ao salvar arquivos Dart
+  "[dart]": {
+    "editor.formatOnSave": true
   },
-  "explorer.sortOrder": "default",
-  "explorer.compactFolders": false,
-  "files.exclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "**/dist": true,
-    "**/*.freezed.dart": true,
-    "**/*.g.dart": true
-  },
-
-  // 🖥️ Terminal e Performance
-  "terminal.integrated.fontFamily": "Fira Code",
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.showExitAlert": false,
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "dart.flutterHotReloadOnSave": "never",
   "github.copilot.enable": {
     "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
   },
+  "workbench.colorTheme": "Dracula Theme",
   "workbench.navigationControl.enabled": false,
+  "workbench.iconTheme": "bearded-icons",
   "window.commandCenter": false,
+  "chat.commandCenter.enabled": false,
   "workbench.layoutControl.enabled": false,
-  // Desativar reload automático ao salvar arquivos Dart
-  "[dart]": {
-    "editor.formatOnSave": true
-  },
-  "dart.flutterHotReloadOnSave": false,
-  "dart.flutterHotRestartOnSave": false,
-  "workbench.iconTheme": "vscode-icons"
+  "terminal.integrated.env.osx": {},
+  "workbench.panel.showLabels": false
 }
